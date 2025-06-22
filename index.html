@@ -1,520 +1,357 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Computer Science Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>Willism</title>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-    <!-- slider stylesheet -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
-    />
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
 
-    <!-- fonts style -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
-  </head>
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-  <body>
-    <div class="hero_area">
-      <!-- header section strats -->
-      <header class="header_section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-11 offset-md-1 px-0">
-              <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                <a class="navbar-brand" href="index.html">
-                  <span>
-                    Willism
-                  </span>
-                </a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+        .header .title {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
 
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <div
-                    class="d-flex ml-auto flex-column flex-lg-row align-items-center"
-                  >
-                    <ul class="navbar-nav  ">
-                      <li class="nav-item active">
-                        <a class="nav-link pl-0" href="index.html"
-                          >Home <span class="sr-only">(current)</span></a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="work.html">MyWork </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="blog.html"> Blog </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact us</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .education-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .education-item .university {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .education-item .year {
+            color: #666;
+            font-style: italic;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-item {
+            background: #e9ecef;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Your Name Here</h1>
+            <p class="title">Computer Science Engineer</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">📧 Email</a>
+                <a href="https://github.com/armukilan" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗 LinkedIn</a>
+                <a href="/resume.pdf" target="_blank">📄 Resume</a>
             </div>
-          </div>
-        </div>
-      </header>
-      <!-- end header section -->
+        </header>
 
-      <!-- slider section -->
-      <div class="slider_section">
-        <div
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-6 offset-lg-1">
-                    <div class="detail-box">
-                      <div class="heading_box">
-                        <h2>i Am Willism My <span>Creative</span></h2>
-                        <h1>
-                          Portfolio
-                        </h1>
-                      </div>
-                      <div>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 px-0">
-                    <div class="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <!-- Education Section -->
+        <section class="section">
+            <h2>🎓 Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Engineering in Computer Science</h3>
+                <div class="university">Your University Name</div>
+                <div class="year">Year - Year (e.g., 2020 - 2024)</div>
+                <p>Relevant Coursework: Data Structures, Algorithms, Database Systems, Software Engineering, Machine Learning, Computer Networks</p>
             </div>
-            <div class="carousel-item">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-6 offset-lg-1">
-                    <div class="detail-box">
-                      <div class="heading_box">
-                        <h2>i Am Willism My <span>Creative</span></h2>
-                        <h1>
-                          Portfolio
-                        </h1>
-                      </div>
-                      <div>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 px-0">
-                    <div class="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-6 offset-lg-1">
-                    <div class="detail-box">
-                      <div class="heading_box">
-                        <h2>i Am Willism My <span>Creative</span></h2>
-                        <h1>
-                          Portfolio
-                        </h1>
-                      </div>
-                      <div>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 px-0">
-                    <div class="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slider_btn-container">
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
+            <!-- Add more education items if needed -->
+        </section>
 
-      <!-- end slider section -->
+        <!-- Skills Section -->
+        <section class="section">
+            <h2>🛠️ Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2>🚀 Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Project Name 1</h3>
+                    <p>Brief description of your project. Explain what it does, the problem it solves, and why it's interesting. Keep it concise but informative.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/armukilan/project-repo-name" target="_blank">🔗 GitHub</a>
+                        <a href="#" target="_blank">🌐 Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Project Name 2</h3>
+                    <p>Another project description. Highlight the key features and technologies used. Mention any challenges you overcame or interesting aspects.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/armukilan/project-repo-name-2" target="_blank">🔗 GitHub</a>
+                        <a href="#" target="_blank">🌐 Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Project Name 3</h3>
+                    <p>Third project description. Show variety in your projects - maybe this one uses different technologies or solves a different type of problem.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/armukilan/project-repo-name-3" target="_blank">🔗 GitHub</a>
+                        <a href="#" target="_blank">🌐 Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 20px; color: rgba(255,255,255,0.8);">
+            <p>&copy; 2025 Your Name. Built with HTML, CSS & ❤️</p>
+        </footer>
     </div>
-    <!-- end hero area -->
-
-    <!-- design section -->
-
-    <section class="design_section layout_padding-top">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            UI/UX Design
-          </h2>
-        </div>
-        <div class="design_container layout_padding2">
-          <div class="box b-1">
-            <h5>
-              User <br />
-              Experience
-            </h5>
-          </div>
-          <div class="box b-2">
-            <h5>
-              Interface <br />
-              Design
-            </h5>
-          </div>
-          <div class="box b-3">
-            <h5>
-              Mobile Apps
-            </h5>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end design section   -->
-    <div>
-      <hr class="section_hr" />
-    </div>
-    <!-- about section -->
-
-    <section class="about_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            About
-          </h2>
-        </div>
-        <div class="box layout_padding2-top layout_padding-bottom">
-          <div class="detail-box">
-            <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using LoremIt is a long established fact that a reader
-              will be distracted by the readable content of a page when looking
-              at its layout. The point of using Lorem
-            </p>
-          </div>
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
-    </section>
-
-    <!-- end about section -->
-
-    <!-- project section -->
-
-    <section class="project_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            Our Projects
-          </h2>
-        </div>
-        <div class="project_container layout_padding2-top">
-          <div class="box">
-            <img src="images/p-1.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-2.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-3.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-4.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-5.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-6.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-7.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-8.jpg" alt="" />
-          </div>
-          <div class="box">
-            <img src="images/p-9.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end project section -->
-
-    <!-- expand section -->
-
-    <section class="expand_section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="img-box">
-              <img src="images/expand-img.jpg" alt="" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="detail-box">
-              <h2>
-                Expand your horizons, explore ours. It's all here. It's only
-                here.
-              </h2>
-              <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using LoremIt is a long established fact that a
-                reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end expand section -->
-    <div>
-      <hr class="section_hr" />
-    </div>
-    <!-- blog section -->
-    <section class="blog_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            See Our Blog
-          </h2>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b-1.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h4>
-                  Readable content of a page
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b-2.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h4>
-                  Readable content of a page
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b-3.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h4>
-                  Readable content of a page
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end blog section -->
-
-    <!-- contact section -->
-
-    <section class="contact_section layout_padding">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            Contact Us
-          </h2>
-        </div>
-        <div class="">
-          <div class="">
-            <div class="row">
-              <div class="col-md-9 mx-auto">
-                <div class="contact-form">
-                  <form action="">
-                    <div>
-                      <input type="text" placeholder="Full Name " />
-                    </div>
-                    <div>
-                      <input type="text" placeholder="Phone Number" />
-                    </div>
-                    <div>
-                      <input type="email" placeholder="Email Address" />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Message"
-                        class="input_message"
-                      />
-                    </div>
-                    <div class="d-flex justify-content-center">
-                      <button type="submit" class="btn_on-hover">
-                        Send
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end contact section -->
-
-    <!-- info section -->
-    <section class="info_section layout_padding-top layout_padding2-bottom">
-      <div class="container">
-        <div class="social_container">
-          <h2>
-            Follow Us
-          </h2>
-          <div class="social_box">
-            <a href="">
-              <img src="images/fb.png" alt="" />
-            </a>
-            <a href="">
-              <img src="images/twitter.png" alt="" />
-            </a>
-            <a href="">
-              <img src="images/linkedin.png" alt="" />
-            </a>
-            <a href="">
-              <img src="images/youtube.png" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end info_section -->
-
-    <!-- footer section -->
-    <section class="container-fluid footer_section">
-      <div class="container">
-        <p>
-          &copy; 2020 All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
-        </p>
-      </div>
-    </section>
-    <!-- footer section -->
-
-    <script  src="js/jquery-3.4.1.min.js"></script>
-    <script  src="js/bootstrap.js"></script>
-
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-      }
-
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-    </script>
-  </body>
+</body>
 </html>
